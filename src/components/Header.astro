@@ -1,0 +1,58 @@
+<header>
+  <nav class="navbar container flex">
+    <a href="/">
+      <img class="navbar-icon" src="/assets/KTV.png" width="200px" alt="KTV Guyane">
+    </a>
+    <ul class="navbar-menu flex">
+      <li><a href="#">En direct</a></li>
+      <li><a href="#">Emissions</a></li>
+      <li><a href="#">Rechercher</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  header {
+    position: fixed;
+    width: 100%;
+    padding: 0.5em 0;
+  }
+  .navbar {
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar-icon {
+    width: 100px;
+  }
+  .navbar-btn {
+    position: absolute;
+    justify-self: end;
+    top: 3px;
+    padding: 28px 20px;
+  }
+  .navbar-menu {
+    display: none;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    padding: 1rem;
+  }
+  a {
+    text-decoration: none;
+    color: initial;
+  }
+  a:hover,
+  a:focus {
+    color: green;
+  }
+  @media (min-width: 768px) {
+    .navbar-menu {
+      display: flex;
+    }
+  }
+</style>
