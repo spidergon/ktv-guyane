@@ -1,0 +1,28 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="page container">
+  <h1>{title}</h1>
+  <div class="content">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .page {
+    padding-top: 6em;
+    padding-bottom: 5em;
+    max-width: 50em;
+  }
+  h1 {
+    margin: 1.5rem 0;
+  }
+  .page :global(p) {
+    margin: 1.125rem 0;
+  }
+</style>
