@@ -60,6 +60,12 @@ p {
   font-weight: 400;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 /* set up the body */
 body {
   font-family: var(--ff-sans-normal);
@@ -133,6 +139,14 @@ select {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap; /* added line */
   border: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.mt1 {
+  margin-top: 1rem;
 }
 
 body {

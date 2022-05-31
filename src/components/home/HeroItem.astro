@@ -1,0 +1,35 @@
+---
+export interface Props {
+  id: string;
+  title: string;
+  channel: string;
+  thumbnail_120_url: string;
+}
+
+const { id, title, channel, thumbnail_120_url } = Astro.props;
+---
+
+<a class="flex item" href={`/video/${id}`}>
+  <div class="img-content">
+    <img src={thumbnail_120_url} alt="">
+  </div>
+  {title}<br/>
+  {channel}
+</a>
+
+<style>
+  .item {
+		padding: 0.5em 0;
+		color: inherit;
+		text-decoration: none;
+	}
+	.img-content {
+		width: 120px;
+    height: 70px;
+	}
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+</style>

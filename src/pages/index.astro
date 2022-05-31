@@ -1,9 +1,39 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import HeroSection from '../components/HeroSection.astro';
+import HeroSection from '../components/home/HeroSection.astro';
 ---
 
 <Layout title="KTV Guyane - Regardons-nous être">
 	<HeroSection />
+	<section>
+		<div class="container">
+			<h2>Les dernières Actus</h2>
+			<div class="grid">
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<h2>Les Exclusivités</h2>
+			<div class="grid">
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<h2>Les Documentaires</h2>
+			<div class="grid">
+			</div>
+		</div>
+	</section>
 </Layout>
 
+<style>
+	section {
+		height: 15em;
+		background-color: rgba(0,0,0,0.3);
+		padding: 2em 0;
+		color: #fff;
+		margin: 2em 0;
+	}
+</style>

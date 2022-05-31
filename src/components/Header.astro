@@ -14,10 +14,10 @@
     </a>
     <div class="nav flex">
       <div class="nav-items">
-        <a href="/">En direct</a>
-        <a href="/a-propos/">À propos</a>
-        <a href="/emissions">Emissions</a>
-        <a href="/contact/">Contact</a>
+        <a href="/direct/">Le Direct</a>
+        <a href="/jt/">Le JT</a>
+        <a href="/emissions/">Emissions</a>
+        <a href="/programme-tv/">Programme TV</a>
       </div>
     </div>
   </div>
@@ -25,9 +25,6 @@
 
 <style>
   header {
-    position: fixed;
-    z-index: 999;
-    width: 100%;
     padding: 0.5em 0;
   }
   .navbar {
@@ -36,18 +33,6 @@
     justify-content: space-between;
     align-items: center;
   }
-  /* header {
-    z-index: 999;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5em 0;
-    transition: 0.5s ease;
-  } */
   .brand {
     color: #000;
     font-size: 1.5em;
@@ -83,49 +68,9 @@
   .nav-items a:focus:before {
     width: 100%
   }
-
   @media (min-width: 768px) {
     .nav {
       display: flex;
     }
   }
-
-  /* .navbar {
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .navbar-icon {
-    width: 100px;
-  }
-  .navbar-btn {
-    position: absolute;
-    justify-self: end;
-    top: 3px;
-    padding: 28px 20px;
-  }
-  .navbar-menu {
-    display: none;
-  }
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  li {
-    padding: 1rem;
-  }
-  a {
-    text-decoration: none;
-    color: initial;
-  }
-  a:hover,
-  a:focus {
-    color: green;
-  }
-  @media (min-width: 768px) {
-    .navbar-menu {
-      display: flex;
-    }
-  } */
 </style>
