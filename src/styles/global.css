@@ -5,23 +5,24 @@
 :root {
   /* colors */
   --clr-dark: 230 35% 7%;
-  --clr-light: 231 77% 90%;
-  --clr-white: 0 0% 100%;
+  /* --clr-light: 231 77% 90%; */
+  /* --clr-white: 0 0% 100%; */
 
   /* font-sizes */
-  --fs-900: 9.375rem;
-  --fs-800: 6.25rem;
-  --fs-700: 3.5rem;
-  --fs-600: 2rem;
-  --fs-500: 1.75rem;
+  /* --fs-900: 9.375rem; */
+  /* --fs-800: 6.25rem; */
+  /* --fs-700: 3.5rem; */
+  /* --fs-600: 2rem; */
+  /* --fs-500: 1.75rem; */
   --fs-400: 1.125rem;
-  --fs-300: 1rem;
-  --fs-200: 0.875rem;
+  /* --fs-300: 1rem; */
+  /* --fs-200: 0.875rem; */
 
   /* font-families */
-  --ff-serif: 'Bellefair', serif;
+  --ff: Arial, -apple-system, system-ui, BlinkMacSystemFont, Helvetica, sans-serif;
+  /* --ff-serif: 'Bellefair', serif;
   --ff-sans-cond: 'Barlow Condensed', sans-serif;
-  --ff-sans-normal: 'Barlow', sans-serif;
+  --ff-sans-normal: 'Barlow', sans-serif; */
 }
 
 /* ------------------- */
@@ -66,14 +67,20 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* set up the body */
 body {
-  font-family: var(--ff-sans-normal);
+  font-family: var(--ff);
   font-size: var(--fs-400);
   color: hsl(var(--clr-dark));
-  background-color: hsl(var(--clr-white));
+  /* background-color: hsl(var(--clr-white)); */
   line-height: 1.5;
   min-height: 100vh;
+  background-image: linear-gradient(170deg, #fff 0%, yellow 80%, green 100%);
 }
 
 /* make images easier to work with */
@@ -119,9 +126,9 @@ select {
   gap: var(--gap, 1rem);
 }
 
-.flow > *:where(:not(:first-child)) {
+/* .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-space, 1rem);
-}
+} */
 
 .container {
   padding-inline: 1em;
@@ -129,7 +136,7 @@ select {
   max-width: 80rem;
 }
 
-.sr-only {
+/* .sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -137,9 +144,9 @@ select {
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-  white-space: nowrap; /* added line */
+  white-space: nowrap;
   border: 0;
-}
+} */
 
 .center {
   text-align: center;
@@ -147,8 +154,4 @@ select {
 
 .mt1 {
   margin-top: 1rem;
-}
-
-body {
-  background-image: linear-gradient(170deg, #fff 0%, yellow 80%, green 100%);
 }

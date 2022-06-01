@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+// src/pages/videos/[id].astro
+const { id } = Astro.params;
+
+export function getStaticPaths() {
+  return [
+    // Generates: /videos/x8b8dou
+    {params: {id: 'x8b8dou'}},
+    {params: {id: 'x8b8dov'}},
+    {params: {id: 'x8b8doy'}},
+    {params: {id: 'x8b8dt7'}},
+    {params: {id: 'x8b8dgl'}},
+  ];
+}
+---
+
+<Layout title={`${id} - KTV Guyane`}>
+  <div class="container">
+    <script src="https://geo.dailymotion.com/player/x8vkt.js" data-video={id}></script>
+  </div>
+</Layout>
+
+<style>
+  .container {
+    margin-top: 1em;
+		padding: 0;
+	}
+  @media (min-width: 800px) {
+		.container {
+			padding-inline: 1em;
+		}
+  }
+</style>
