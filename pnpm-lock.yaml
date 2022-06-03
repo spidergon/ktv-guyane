@@ -1,12 +1,12 @@
 lockfileVersion: 5.4
 
 specifiers:
-  astro: 1.0.0-beta.38
-  prettier: ^2.6.2
-  prettier-plugin-astro: ^0.0.12
+  astro: 1.0.0-beta.40
+  prettier: 2.6.2
+  prettier-plugin-astro: 0.0.12
 
 devDependencies:
-  astro: 1.0.0-beta.38
+  astro: 1.0.0-beta.40
   prettier: 2.6.2
   prettier-plugin-astro: 0.0.12
 
@@ -108,7 +108,7 @@ packages:
       escalade: 3.1.1
       is-docker: 3.0.0
       is-wsl: 2.2.0
-      node-fetch: 3.2.4
+      node-fetch: 3.2.5
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -116,7 +116,7 @@ packages:
   /@astrojs/webapi/0.12.0:
     resolution: {integrity: sha512-rie5SYbvXVykKYBsNFnkUtDe7/0mGmrvj7Gg5pOKV34Cg/CrCJbvUSwH2oyCG2OLGtN2ttUOLvSgnVq3eipCsQ==}
     dependencies:
-      node-fetch: 3.2.4
+      node-fetch: 3.2.5
     dev: true
 
   /@babel/code-frame/7.16.7:
@@ -559,8 +559,8 @@ packages:
       tslib: 2.4.0
     dev: true
 
-  /astro/1.0.0-beta.38:
-    resolution: {integrity: sha512-Xbmt42mnFNCxnnrvZgQFdMkjhdAlKlMNz9a/d4KlYjPlLzJCTK+bzTEllmfu2v+2k3Y/jGvrW7gWiRe38n4ORw==}
+  /astro/1.0.0-beta.40:
+    resolution: {integrity: sha512-7TbwTp6S3cMffrK+aRSCzU8sMPJ+6UC0pQeKkO+LvI9AQHheUv69edZckW55SDJcHZhScDnwBwXuyE4ZGYxtzQ==}
     engines: {node: ^14.15.0 || >=16.0.0, npm: '>=6.14.0'}
     hasBin: true
     dependencies:
@@ -606,7 +606,7 @@ packages:
       prompts: 2.4.2
       recast: 0.20.5
       resolve: 1.22.0
-      rollup: 2.75.4
+      rollup: 2.75.5
       semver: 7.3.7
       serialize-javascript: 6.0.0
       shiki: 0.10.1
@@ -675,8 +675,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001344
-      electron-to-chromium: 1.4.142
+      caniuse-lite: 1.0.30001346
+      electron-to-chromium: 1.4.145
       escalade: 3.1.1
       node-releases: 2.0.5
       picocolors: 1.0.0
@@ -701,8 +701,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /caniuse-lite/1.0.30001344:
-    resolution: {integrity: sha512-0ZFjnlCaXNOAYcV7i+TtdKBp0L/3XEU2MF/x6Du1lrh+SRX4IfzIVL4HNJg5pB2PmFb8rszIGyOvsZnqqRoc2g==}
+  /caniuse-lite/1.0.30001346:
+    resolution: {integrity: sha512-q6ibZUO2t88QCIPayP/euuDREq+aMAxFE5S70PkrLh0iTDj/zEhgvJRKC2+CvXY6EWc6oQwUR48lL5vCW6jiXQ==}
     dev: true
 
   /ccount/2.0.1:
@@ -834,8 +834,8 @@ packages:
       ms: 2.1.2
     dev: true
 
-  /decode-named-character-reference/1.0.1:
-    resolution: {integrity: sha512-YV/0HQHreRwKb7uBopyIkLG17jG6Sv2qUchk9qSoVJ2f+flwRsPNBO0hAnjt6mTNYUT+vw9Gy2ihXg4sUWPi2w==}
+  /decode-named-character-reference/1.0.2:
+    resolution: {integrity: sha512-O8x12RzrUF8xyVcY0KJowWsmaJxQbmy0/EtnNtHRpsOcT7dFk5W598coHqBVpmWo1oQQfsCqfCmkZN5DJrZVdg==}
     dependencies:
       character-entities: 2.0.1
     dev: true
@@ -913,8 +913,8 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: true
 
-  /electron-to-chromium/1.4.142:
-    resolution: {integrity: sha512-ea8Q1YX0JRp4GylOmX4gFHIizi0j9GfRW4EkaHnkZp0agRCBB4ZGeCv17IEzIvBkiYVwfoKVhKZJbTfqCRdQdg==}
+  /electron-to-chromium/1.4.145:
+    resolution: {integrity: sha512-g4VQCi61gA0t5fJHsalxAc8NpvxC/CEwLAGLfJ+DmkRXTEyntJA7H01771uVD6X6nnViv3GToPgb0QOVA8ivOQ==}
     dev: true
 
   /emmet/2.3.6:
@@ -1521,7 +1521,7 @@ packages:
       html-void-elements: 2.0.1
       property-information: 6.1.1
       space-separated-tokens: 2.0.1
-      stringify-entities: 4.0.2
+      stringify-entities: 4.0.3
       unist-util-is: 5.1.1
     dev: true
 
@@ -1943,7 +1943,7 @@ packages:
     dependencies:
       '@types/mdast': 3.0.10
       '@types/unist': 2.0.6
-      decode-named-character-reference: 1.0.1
+      decode-named-character-reference: 1.0.2
       mdast-util-to-string: 3.1.0
       micromark: 3.0.10
       micromark-util-decode-numeric-character-reference: 1.0.0
@@ -2031,7 +2031,7 @@ packages:
       '@types/mdast': 3.0.10
       mdast-util-to-markdown: 1.3.0
       parse-entities: 4.0.0
-      stringify-entities: 4.0.2
+      stringify-entities: 4.0.3
       unist-util-remove-position: 4.0.1
       unist-util-stringify-position: 3.0.2
       vfile-message: 3.1.2
@@ -2084,7 +2084,7 @@ packages:
   /micromark-core-commonmark/1.0.6:
     resolution: {integrity: sha512-K+PkJTxqjFfSNkfAhp4GB+cZPfQd6dxtTXnf+RjZOV7T4EEXnvgzOcnp+eSTmpGk9d1S9sL6/lqrgSNn/s0HZA==}
     dependencies:
-      decode-named-character-reference: 1.0.1
+      decode-named-character-reference: 1.0.2
       micromark-factory-destination: 1.0.0
       micromark-factory-label: 1.0.2
       micromark-factory-space: 1.0.0
@@ -2326,7 +2326,7 @@ packages:
   /micromark-util-decode-string/1.0.2:
     resolution: {integrity: sha512-DLT5Ho02qr6QWVNYbRZ3RYOSSWWFuH3tJexd3dgN1odEuPNxCngTCXJum7+ViRAd9BbdxCvMToPOD/IvVhzG6Q==}
     dependencies:
-      decode-named-character-reference: 1.0.1
+      decode-named-character-reference: 1.0.2
       micromark-util-character: 1.1.0
       micromark-util-decode-numeric-character-reference: 1.0.0
       micromark-util-symbol: 1.0.1
@@ -2394,7 +2394,7 @@ packages:
     dependencies:
       '@types/debug': 4.1.7
       debug: 4.3.4
-      decode-named-character-reference: 1.0.1
+      decode-named-character-reference: 1.0.2
       micromark-core-commonmark: 1.0.6
       micromark-factory-space: 1.0.0
       micromark-util-character: 1.1.0
@@ -2483,8 +2483,8 @@ packages:
     engines: {node: '>=10.5.0'}
     dev: true
 
-  /node-fetch/3.2.4:
-    resolution: {integrity: sha512-WvYJRN7mMyOLurFR2YpysQGuwYrJN+qrrpHjJDuKMcSPdfFccRUla/kng2mz6HWSBxJcqPbvatS6Gb4RhOzCJw==}
+  /node-fetch/3.2.5:
+    resolution: {integrity: sha512-u7zCHdJp8JXBwF09mMfo2CL6kp37TslDl1KP3hRGTlCInBtag+UO3LGVy+NF0VzvnL3PVMpA2hXh1EtECFnyhQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       data-uri-to-buffer: 4.0.0
@@ -2599,7 +2599,7 @@ packages:
       character-entities: 2.0.1
       character-entities-legacy: 3.0.0
       character-reference-invalid: 2.0.1
-      decode-named-character-reference: 1.0.1
+      decode-named-character-reference: 1.0.2
       is-alphanumerical: 2.0.1
       is-decimal: 2.0.1
       is-hexadecimal: 2.0.1
@@ -2890,8 +2890,8 @@ packages:
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
     dev: true
 
-  /rollup/2.75.4:
-    resolution: {integrity: sha512-JgZiJMJkKImMZJ8ZY1zU80Z2bA/TvrL/7D9qcBCrfl2bP+HUaIw0QHUroB4E3gBpFl6CRFM1YxGbuYGtdAswbQ==}
+  /rollup/2.75.5:
+    resolution: {integrity: sha512-JzNlJZDison3o2mOxVmb44Oz7t74EfSd1SQrplQk0wSaXV7uLQXtVdHbxlcT3w+8tZ1TL4r/eLfc7nAbz38BBA==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
@@ -3073,8 +3073,8 @@ packages:
       safe-buffer: 5.2.1
     dev: true
 
-  /stringify-entities/4.0.2:
-    resolution: {integrity: sha512-MTxTVcEkorNtBbNpoFJPEh0kKdM6+QbMjLbaxmvaPMmayOXdr/AIVIIJX7FReUVweRBFJfZepK4A4AKgwuFpMQ==}
+  /stringify-entities/4.0.3:
+    resolution: {integrity: sha512-BP9nNHMhhfcMbiuQKCqMjhDP5yBCAxsPu4pHFFzJ6Alo9dZgY4VLDPutXqIjpRiMoKdp7Av85Gr73Q5uH9k7+g==}
     dependencies:
       character-entities-html4: 2.1.0
       character-entities-legacy: 3.0.0
@@ -3406,7 +3406,7 @@ packages:
       esbuild: 0.14.42
       postcss: 8.4.14
       resolve: 1.22.0
-      rollup: 2.75.4
+      rollup: 2.75.5
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
