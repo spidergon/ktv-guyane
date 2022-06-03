@@ -80,7 +80,7 @@ body {
   /* background-color: hsl(var(--clr-white)); */
   line-height: 1.5;
   min-height: 100vh;
-  background-image: linear-gradient(170deg, #fff 0%, yellow 80%, green 100%);
+  /* background-image: linear-gradient(170deg, #fff 0%, yellow 80%, green 100%); */
 }
 
 /* make images easier to work with */
@@ -136,7 +136,7 @@ select {
   max-width: 80rem;
 }
 
-/* .sr-only {
+.sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -146,7 +146,7 @@ select {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
-} */
+}
 
 .center {
   text-align: center;
