@@ -74,6 +74,8 @@ a {
 
 /* set up the body */
 body {
+  display: flex;
+  flex-direction: column;
   font-family: var(--ff);
   font-size: var(--fs-400);
   color: hsl(var(--clr-dark));
@@ -81,6 +83,10 @@ body {
   line-height: 1.5;
   min-height: 100vh;
   /* background-image: linear-gradient(170deg, #fff 0%, yellow 80%, green 100%); */
+}
+
+main {
+  flex-grow: 1;
 }
 
 /* make images easier to work with */
@@ -154,4 +160,13 @@ select {
 
 .mt1 {
   margin-top: 1rem;
+}
+
+/* ------------------- */
+/* Layout              */
+/* ------------------- */
+
+.navbar,
+footer {
+  background-image: linear-gradient(170deg, #fff 0%, yellow 80%, green 100%);
 }

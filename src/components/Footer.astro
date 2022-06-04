@@ -1,6 +1,10 @@
+---
+import menu from '@tools/menu.js';
+---
+
 <footer>
   <div class="container">
-    <div class="content flex bordered">
+    <div class="content flex">
       <div>
         <h4>Suivez-nous sur les réseaux sociaux&nbsp;:</h4>
         <a href="https://www.facebook.com/KTVTOKO" target="_blank" rel="noreferrer noopener nofollow"><img src="/assets/facebook.svg" alt="facebook" title="facebook"></a>
@@ -12,10 +16,7 @@
       </div>
       <div>
         <ul>
-          <li><a href="/direct/">Le Direct</a></li>
-          <li><a href="/jt/">Le JT</a></li>
-          <li><a href="/emissions/">Emissions</a></li>
-          <li><a href="/programme-tv/">Programme TV</a></li>
+          {menu.map(({href, title}) => (<li><a href={href}>{title}</a></li>))}
         </ul>
       </div>
       <div>
@@ -35,6 +36,7 @@
 <style>
   footer {
     margin-top: 5em;
+    padding: 1em 0 2em;
   }
   h4 {
     font-weight: 600;
@@ -45,16 +47,12 @@
   ul {
     line-height: 1.8;
   }
-  .bordered {
-    border-top: 2px solid black;
-    padding-top: 1.5em;
-  }
   .content {
     flex-direction: column;
     justify-content: space-between;
   }
   .foot {
-    margin: 1.5em auto;
+    margin-top: 1.5em;
   }
   @media (min-width: 768px) {
     .content {

@@ -1,8 +1,7 @@
 ---
-// document.getElementById('menuBtn').addEventListener('click', () => {
-//   console.log('menu');
-// });
+import menu from '@tools/menu.js';
 ---
+
 <header>
   <div class="topbar container flex">
     <a href="/" class="brand">
@@ -10,23 +9,28 @@
     </a>
     <div class="icons flex">
       <a href="https://www.facebook.com/KTVTOKO" target="_blank" rel="noreferrer noopener nofollow"><img src="/assets/facebook.svg" alt="facebook" title="Suivez-nous sur facebook" style="width:1.5em;"></a>
-      <button id="menuBtn">
+      <button class="menu-btn">
         <span class="sr-only">Ouvrir / fermer menu</span>
-        <img src="/assets/menu.png" alt="menu">
       </button>
     </div>
   </div>
   <div class="navbar">
     <nav class="container">
       <ul class="flex">
-        <li><a href="/direct/">Le Direct</a></li>
-        <li><a href="/jt/">Le JT</a></li>
-        <li><a href="/emissions/">Emissions</a></li>
-        <li><a href="/programme-tv/">Programme TV</a></li>
+        {menu.map(({href, title}) => (<li><a href={href}>{title}</a></li>))}
       </ul>
     </nav>
   </div>
 </header>
+
+<script>
+  const menuBtn = document.querySelector('.menu-btn');
+  const nav = document.querySelector('nav');
+  menuBtn.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    menuBtn.classList.toggle('active');
+  });
+</script>
 
 <style>
   header {
@@ -45,22 +49,36 @@
     width: 150px;
   }
   .icons {
+    --gap: 1.5em;
     align-items: center;
   }
   .navbar {
-    margin-top: 1em;
+    margin-top: 1.5em;
     min-height: 1em;
-    background-image: linear-gradient(170deg, #fff 0%, yellow 80%, green 100%);
   }
   button {
+    background: url(/assets/menu.png) no-repeat;
+    background-size: 32px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
     border: 0;
-    background: transparent;
-    cursor: pointer;
     padding: 0.5em;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  button.active {
+    background: url(/assets/close.png) no-repeat;
+    background-size: 24px;
+    background-position: center;
+    transition: 0.3s ease;
   }
   nav {
     display: none;
     width: 100%;
+  }
+  nav.active {
+    display: block;
   }
   nav ul {
     flex-direction: column;

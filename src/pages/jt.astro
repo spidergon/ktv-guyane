@@ -1,12 +1,13 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import Page from '@components/page.astro';
+import VideoPage from '@components/VideoPage.astro';
+import HeroPlayer from '@components/HeroPlayer.jsx';
+
+const src='https://res.cloudinary.com/cserviusprod/video/upload/v1654305801/ktv/vids/video02.mp4'
 ---
 
 <Layout title="Le JT de KTV Guyane - Regardons-nous être">
-	<Page title="Le JT - Page en construction">
-		<p>Cette page est en construction...</p>
-    <p>KTV Guyane est un média de proximité consacré à la culture guyanaise et d'ailleurs.</p>
-		<p>Regardons-nous être. Dans une société multiculturelle comme la notre. La télé de proximité.</p>
-	</Page>
+	<VideoPage>
+		<HeroPlayer client:load src={src} />
+	</VideoPage>
 </Layout>

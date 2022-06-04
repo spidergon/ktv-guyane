@@ -10,17 +10,14 @@ try {
 } catch (error) {
 	console.error(error);
 }
-// console.log(data);
+
+const src='https://res.cloudinary.com/cserviusprod/video/upload/v1654305801/ktv/vids/video06.mp4'
 ---
+
 <section>
 	<div class="container grid">
 		<div>
-			<HeroPlayer client:load />
-			<!-- <script src="https://geo.dailymotion.com/player/x8vkt.js" data-video="x8b6o8e"></script> -->
-
-			<!-- <script src="https://geo.dailymotion.com/player/x8vkt.js" data-playlist="x7hr2l"></script> -->
-
-			<!-- <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;" itemscope itemtype="https://schema.org/VideoObject"><meta itemprop="name" content="La sélection" /><meta itemprop="description" content="La sélection" /><meta itemprop="uploadDate" content="2022-05-28T21:12:23.000Z" /><meta itemprop="thumbnailUrl" content="https://s2.dmcdn.net/v/Tyyik1Yaf3s7VWqdD/x180" /><meta itemprop="embedUrl" content="https://dailymotion.com/embed/playlist/x7hr2l" /><iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://dailymotion.com/embed/playlist/x7hr2l?autoplay=1" width="100%" height="100%"   allow="autoplay" allowfullscreen></iframe></div> -->
+			<HeroPlayer client:load src={src} />
 		</div>
 		<div class="playlist">
 			<h2>Les denières vidéos</h2>
@@ -35,7 +32,7 @@ try {
 
 <style>
 	section {
-		margin-top: 1em;
+		margin-top: 1.5em;
 	}
 	.playlist {
 		margin-top: 1em;
