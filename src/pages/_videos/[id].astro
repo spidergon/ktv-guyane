@@ -1,6 +1,6 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import VideoPage from '@components/VideoPage.astro';
+import VideoBlock from '@components/VideoBlock.astro';
 
 // src/pages/videos/[id].astro
 const { id } = Astro.params;
@@ -9,16 +9,12 @@ export function getStaticPaths() {
   return [
     // Generates: /videos/x8b8dou
     {params: {id: 'x8b8dou'}},
-    {params: {id: 'x8b8dov'}},
-    {params: {id: 'x8b8doy'}},
-    {params: {id: 'x8b8dt7'}},
-    {params: {id: 'x8b8dgl'}},
   ];
 }
 ---
 
 <Layout title={`${id} - KTV Guyane`}>
-  <VideoPage>
+  <VideoBlock>
     <script src="https://geo.dailymotion.com/player/x8vkt.js" data-video={id}></script>
-  </VideoPage>
+  </VideoBlock>
 </Layout>

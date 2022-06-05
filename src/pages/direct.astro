@@ -1,13 +1,11 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import VideoPage from '@components/VideoPage.astro';
-import HeroPlayer from '@components/HeroPlayer.jsx';
-
-const src='https://res.cloudinary.com/cserviusprod/video/upload/v1654305801/ktv/vids/video03.mp4'
+import VideoBlock from '@components/VideoBlock.astro';
+import Player from '@components/Player.jsx';
 ---
 
 <Layout title="Le Direct de KTV Guyane - Regardons-nous être">
-	<VideoPage>
-		<HeroPlayer client:load src={src} />
-	</VideoPage>
+	<VideoBlock title="Le Direct">
+		<Player client:load id="video03" />
+	</VideoBlock>
 </Layout>

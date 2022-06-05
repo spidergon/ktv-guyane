@@ -72,17 +72,14 @@ a {
   color: inherit;
 }
 
-/* set up the body */
 body {
   display: flex;
   flex-direction: column;
   font-family: var(--ff);
   font-size: var(--fs-400);
   color: hsl(var(--clr-dark));
-  /* background-color: hsl(var(--clr-white)); */
   line-height: 1.5;
   min-height: 100vh;
-  /* background-image: linear-gradient(170deg, #fff 0%, yellow 80%, green 100%); */
 }
 
 main {
@@ -97,12 +94,12 @@ picture {
 }
 
 /* make form elements easier to work with */
-/* input,
+input,
 button,
 textarea,
 select {
   font: inherit;
-} */
+}
 
 /* remove animations for people who've turned them off */
 @media (prefers-reduced-motion: reduce) {
@@ -137,7 +134,7 @@ select {
 } */
 
 .container {
-  padding-inline: 1em;
+  padding-inline: var(--container-padding, 1em);
   margin-inline: auto;
   max-width: 80rem;
 }
@@ -169,4 +166,29 @@ select {
 .navbar,
 footer {
   background-image: linear-gradient(170deg, #fff 0%, yellow 80%, green 100%);
+}
+
+a:not(.clean) {
+  position: relative;
+  padding-bottom: 0.2em;
+  transition: 0.5s ease;
+}
+a:not(.clean):before {
+  content: '';
+  position: absolute;
+  background: hsl(var(--clr-dark));
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s ease;
+}
+a:not(.clean):hover:before,
+a:not(.clean):focus:before,
+a:not(.clean).active:before {
+  width: 100%;
+}
+
+section {
+  padding: 2em 0;
 }

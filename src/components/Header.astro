@@ -1,14 +1,16 @@
 ---
 import menu from '@tools/menu.js';
+
+const pathname = Astro.canonicalURL.pathname;
 ---
 
 <header>
   <div class="topbar container flex">
-    <a href="/" class="brand">
+    <a href="/" class="brand clean">
       <img src="/assets/KTV.webp" alt="KTV Guyane">
     </a>
     <div class="icons flex">
-      <a href="https://www.facebook.com/KTVTOKO" target="_blank" rel="noreferrer noopener nofollow"><img src="/assets/facebook.svg" alt="facebook" title="Suivez-nous sur facebook" style="width:1.5em;"></a>
+      <a href="https://www.facebook.com/KTVTOKO" class="clean" target="_blank" rel="noreferrer noopener nofollow"><img src="/assets/facebook.svg" alt="facebook" title="Suivez-nous sur facebook" style="width:1.5em;"></a>
       <button class="menu-btn">
         <span class="sr-only">Ouvrir / fermer menu</span>
       </button>
@@ -17,7 +19,7 @@ import menu from '@tools/menu.js';
   <div class="navbar">
     <nav class="container">
       <ul class="flex">
-        {menu.map(({href, title}) => (<li><a href={href}>{title}</a></li>))}
+        {menu.map(({href, title}) => (<li><a class={href !== '/' && href === pathname ? 'active' : ''} href={href}>{title}</a></li>))}
       </ul>
     </nav>
   </div>
@@ -34,7 +36,7 @@ import menu from '@tools/menu.js';
 
 <style>
   header {
-    padding: 0.5em 0;
+    padding-top: 0.5em;
   }
   .topbar {
     height: 60px;
@@ -76,6 +78,7 @@ import menu from '@tools/menu.js';
   nav {
     display: none;
     width: 100%;
+    text-transform: uppercase;
   }
   nav.active {
     display: block;
@@ -86,26 +89,9 @@ import menu from '@tools/menu.js';
   nav li {
     padding: 0.7em;
   }
-  nav a {
-    position: relative;
-    font-size: 1em;
-    font-weight: 500;
-    padding-bottom: 0.2em;
-    transition: 0.5s ease;
-  }
   nav a:before {
-    content: '';
-    position: absolute;
     background: green;
-    width: 0;
     height: 3px;
-    bottom: 0;
-    left: 0;
-    transition: 0.5s ease;
-  }
-  nav a:hover:before,
-  nav a:focus:before {
-    width: 100%
   }
   @media (min-width: 768px) {
     .topbar button {

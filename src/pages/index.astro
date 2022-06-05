@@ -1,10 +1,27 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import HeroSection from '@components/home/HeroSection.astro';
+import HeroPlaylist from '@components/Playlist.jsx';
+
+const sources = [
+	{title: 'Vidéo 07', channel: 'TV', id: 'video07'},
+	{title: 'Vidéo 06', channel: 'TV', id: 'video06'},
+	{title: 'Vidéo 05', channel: 'TV', id: 'video05'},
+	{title: 'Vidéo 04', channel: 'TV', id: 'video04'},
+	{title: 'Vidéo 03', channel: 'TV', id: 'video03'},
+];
 ---
 
 <Layout title="KTV Guyane - Regardons-nous être">
-	<HeroSection />
+	<section>
+		<HeroPlaylist client:load sources={sources} title="Les denières vidéos" />
+	</section>
+	<section>
+		<div class="container">
+			<h2>Nos émissions</h2>
+			<div class="grid">
+			</div>
+		</div>
+	</section>
 	<section>
 		<div class="container">
 			<h2>Les dernières Actus</h2>
@@ -27,13 +44,3 @@ import HeroSection from '@components/home/HeroSection.astro';
 		</div>
 	</section>
 </Layout>
-
-<style>
-	section {
-		height: 15em;
-		background-color: rgba(0,0,0,0.3);
-		padding: 2em 0;
-		color: #fff;
-		margin: 2em 0;
-	}
-</style>

@@ -1,0 +1,55 @@
+.container {
+  --container-padding: 0;
+}
+.playlist {
+  margin-top: 1em;
+}
+.playlist h2 {
+  padding-inline: 0.5rem;
+}
+.item {
+  margin: 0.5em 0;
+  padding: 0.5em;
+  border: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+.item.active,
+.item:hover,
+.item:focus {
+  background: rgba(0, 0, 0, 0.3);
+}
+.item img {
+  object-fit: cover;
+  min-width: 120px;
+}
+.item .content {
+  flex-direction: column;
+  align-items: start;
+  --gap: 0;
+}
+.item .content .tag {
+  font-size: 0.9rem;
+}
+@media (min-width: 800px) {
+  .container {
+    --container-padding: 1em;
+  }
+  .playlist h2 {
+    padding-inline: 0;
+  }
+}
+@media (min-width: 970px) {
+  .container {
+    grid-template-columns: 1fr auto;
+    --gap: 1.5em;
+  }
+  .playlist {
+    margin-top: 0;
+    width: 400px;
+  }
+  .playlist h2 {
+    margin-top: -0.4em;
+  }
+}

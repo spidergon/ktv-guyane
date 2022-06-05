@@ -1,6 +1,6 @@
 ---
 export interface Props {
-  title: string;
+  title?: string;
 }
 
 const { title } = Astro.props as Props;
@@ -8,26 +8,24 @@ const { title } = Astro.props as Props;
 
 <section>
   <div class="container">
-    <div class="page-container">
-      <h1>{title}</h1>
-      <slot />
-    </div>
+    {title && (<h1>{title}</h1>)}
+    <slot />
   </div>
 </section>
 
 <style>
-  .page-container {
-    max-width: 50rem;
-  }
+  .container {
+		--container-padding: 0;
+	}
   h1 {
     margin: 0 0.5em 0.5em;
   }
-  section :global(p) {
-    margin: 1.125rem 0;
-  }
   @media (min-width: 800px) {
+		.container {
+			--container-padding: 1em;
+		}
     h1 {
-      margin: 0 0 1em;
+      margin: 0 0 0.5em;
     }
   }
 </style>
