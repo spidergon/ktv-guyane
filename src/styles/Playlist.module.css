@@ -5,11 +5,13 @@
   margin-top: 1em;
 }
 .playlist h2 {
-  padding-inline: 0.5rem;
+  padding-inline: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 .item {
   margin: 0.5em 0;
-  padding: 0.5em;
+  padding: 0.5em 1em;
   border: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.05);
@@ -24,12 +26,13 @@
   object-fit: cover;
   min-width: 120px;
 }
-.item .content {
+.content {
+  line-height: 1.2;
   flex-direction: column;
   align-items: start;
   --gap: 0;
 }
-.item .content .tag {
+.content span {
   font-size: 0.9rem;
 }
 @media (min-width: 800px) {

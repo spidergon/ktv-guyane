@@ -1,0 +1,27 @@
+---
+import Layout from '@layouts/Layout.astro';
+import VideoBlock from '@components/VideoBlock.astro';
+import Player from '@components/Player.jsx';
+
+// src/pages/videos/[id].astro
+const { id } = Astro.params;
+
+export function getStaticPaths() {
+  return [
+    // Generates: /videos/video07
+    {params: {id: 'video07'}},
+    {params: {id: 'video06'}},
+    {params: {id: 'video05'}},
+    {params: {id: 'video04'}},
+    {params: {id: 'video03'}},
+    {params: {id: 'video02'}},
+    {params: {id: 'video01'}},
+  ];
+}
+---
+
+<Layout title={`${id} - KTV Guyane`}>
+  <VideoBlock title={`${id}`}>
+    <Player client:load id={id} />
+  </VideoBlock>
+</Layout>

@@ -30,7 +30,7 @@ export default function HeroPlaylist({ sources, title }) {
                 </div>
                 <div className={`${Styles.content} flex`}>
                   <p>{title}</p>
-                  <p className={Styles.tag}>{channel}</p>
+                  <span>{channel}</span>
                 </div>
               </button>
             ))}

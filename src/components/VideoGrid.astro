@@ -1,0 +1,72 @@
+---
+import { vidUrl } from '@tools/constants.js'
+
+export interface Source {
+  title: string;
+  channel: string;
+  id: string;
+}
+
+export interface Props {
+  sources: Source[];
+  title: string;
+  more?: string;
+}
+
+const { sources, title, more= '/replays/' } = Astro.props as Props;
+---
+
+<div class="container">
+  <h2>{title}</h2>
+  <div class="grid">
+    {sources.map(({ title, channel, id }) => (
+      <a class="item clean flex" href={`/videos/${id}`}>
+        <img src={`${vidUrl}${id}.jpg`} alt={`${title} - ${channel}`} />
+        <div class="content">
+          <p>{title}</p>
+          <span>{channel}</span>
+        </div>
+      </a>
+    ))}
+  </div>
+  <p class="mt1">
+    ➔ <a href={more}>Voir plus</a>
+  </p>
+</div>
+
+<style>
+	h2 {
+		margin: 1em 0;
+    font-weight: 700;
+		text-transform: uppercase;
+	}
+	.item {
+		flex-direction: column;
+		height: 100%;
+		--gap: 0.5em;
+	}
+  .content {
+    line-height: 1.2;
+  }
+  .content span {
+    font-size: 0.9rem;
+  }
+	img {
+		width: 100%;
+		max-height: 450px;
+		object-fit: cover;
+	}
+	@media (min-width: 800px) {
+		.grid {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+		img {
+			flex-grow: 1;
+		}
+	}
+	@media (min-width: 970px) {
+		.grid {
+			--gap: 1.5em;
+		}
+	}
+</style>

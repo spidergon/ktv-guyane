@@ -1,6 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import HeroPlaylist from '@components/Playlist.jsx';
+import VideoGrid from '@components/VideoGrid.astro';
 
 const sources = [
 	{title: 'Vidéo 07', channel: 'TV', id: 'video07'},
@@ -9,6 +10,18 @@ const sources = [
 	{title: 'Vidéo 04', channel: 'TV', id: 'video04'},
 	{title: 'Vidéo 03', channel: 'TV', id: 'video03'},
 ];
+
+const sourcesBis = [
+	{title: 'Vidéo 07', channel: 'TV', id: 'video07'},
+	{title: 'Vidéo 06', channel: 'TV', id: 'video06'},
+	{title: 'Vidéo 05', channel: 'TV', id: 'video05'},
+];
+
+const sourcesActus = [
+	{title: 'Lorem ipsum dolor sit', channel: 'Actu', id: 'video07'},
+	{title: 'nihil itaque quas', channel: 'Actu', id: 'video06'},
+	{title: 'ipsa repudiandae', channel: 'Actu', id: 'video05'},
+];
 ---
 
 <Layout title="KTV Guyane - Regardons-nous être">
@@ -16,31 +29,15 @@ const sources = [
 		<HeroPlaylist client:load sources={sources} title="Les denières vidéos" />
 	</section>
 	<section>
-		<div class="container">
-			<h2>Nos émissions</h2>
-			<div class="grid">
-			</div>
-		</div>
+		<VideoGrid sources={sourcesActus} title="Actus" />
 	</section>
 	<section>
-		<div class="container">
-			<h2>Les dernières Actus</h2>
-			<div class="grid">
-			</div>
-		</div>
+		<VideoGrid sources={sources} title="Les derniers Replays" />
 	</section>
 	<section>
-		<div class="container">
-			<h2>Les Exclusivités</h2>
-			<div class="grid">
-			</div>
-		</div>
+		<VideoGrid sources={sourcesBis} title="Les Exclusivités" />
 	</section>
 	<section>
-		<div class="container">
-			<h2>Les Documentaires</h2>
-			<div class="grid">
-			</div>
-		</div>
+		<VideoGrid sources={sourcesBis} title="Les Documentaires" />
 	</section>
 </Layout>
