@@ -1,5 +1,6 @@
 ---
 import menu from '@tools/menu.js';
+import SocialIcon from '@components/SocialIcon.astro';
 
 const pathname = Astro.canonicalURL.pathname;
 ---
@@ -10,7 +11,7 @@ const pathname = Astro.canonicalURL.pathname;
       <img src="/assets/KTV.webp" alt="KTV Guyane">
     </a>
     <div class="icons flex">
-      <a href="https://www.facebook.com/KTVTOKO" class="clean" target="_blank" rel="noreferrer noopener nofollow"><img src="/assets/facebook.svg" alt="facebook" title="Suivez-nous sur facebook" style="width:1.5em;"></a>
+      <SocialIcon brand="Facebook" href="https://www.facebook.com/KTVTOKO" />
       <button class="menu-btn">
         <span class="sr-only">Ouvrir / fermer menu</span>
       </button>
@@ -51,7 +52,6 @@ const pathname = Astro.canonicalURL.pathname;
     width: 150px;
   }
   .icons {
-    --gap: 1.5em;
     align-items: center;
   }
   .navbar {

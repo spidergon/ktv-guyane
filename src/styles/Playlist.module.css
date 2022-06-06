@@ -35,7 +35,7 @@
 .content span {
   font-size: 0.9rem;
 }
-@media (min-width: 800px) {
+@media (min-width: 768px) {
   .container {
     --container-padding: 1em;
   }

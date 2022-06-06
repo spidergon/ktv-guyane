@@ -190,5 +190,11 @@ a:not(.clean).active:before {
 }
 
 section {
-  padding: 2em 0;
+  padding: 1em 0;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 2em 0;
+  }
 }

@@ -1,5 +1,6 @@
 ---
 import menu from '@tools/menu.js';
+import SocialIcon from '@components/SocialIcon.astro';
 ---
 
 <footer>
@@ -7,7 +8,9 @@ import menu from '@tools/menu.js';
     <div class="content flex">
       <div>
         <h4>Suivez-nous sur les réseaux sociaux&nbsp;:</h4>
-        <a href="https://www.facebook.com/KTVTOKO" class="clean" target="_blank" rel="noreferrer noopener nofollow"><img src="/assets/facebook.svg" alt="facebook" title="facebook"></a>
+        <div class="socials">
+          <SocialIcon brand="Facebook" href="https://www.facebook.com/KTVTOKO" />
+        </div>
         <h4 class="mt1">Nous recevoir&nbsp;:</h4>
         <ul>
           <li>TNT HD : <strong>6</strong></li>
@@ -30,7 +33,7 @@ import menu from '@tools/menu.js';
       </div>
     </div>
   </div>
-  <div class="container foot"><a href="/">KTV Guyane</a> © 2022</div>
+  <div class="container copy"><a href="/">KTV Guyane</a> © 2022</div>
 </footer>
 
 <style>
@@ -41,20 +44,23 @@ import menu from '@tools/menu.js';
   h4 {
     font-weight: 600;
   }
-  img {
-    width: 1.5em;
-  }
   ul {
     line-height: 1.8;
+  }
+  .container {
+    text-align: center;
   }
   .content {
     flex-direction: column;
     justify-content: space-between;
   }
-  .foot {
+  .copy {
     margin-top: 1.5em;
   }
   @media (min-width: 768px) {
+    .container {
+      text-align: inherit;
+    }
     .content {
       flex-direction: row;
     }

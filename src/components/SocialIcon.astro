@@ -1,0 +1,22 @@
+---
+export interface Props {
+  brand: string;
+  href: string;
+}
+
+const { brand, href } = Astro.props as Props;
+---
+
+<a class="clean" href={href} target="_blank" rel="noopener noreferrer">
+  <img src={`/assets/${brand.toLowerCase()}.svg`} alt={brand} title={`Suivez-nous sur ${brand}`}>
+</a>
+
+<style>
+  a {
+    display: inline-block;
+    padding: 0.5em;
+  }
+  img {
+    width: 1.5em;
+  }
+</style>
