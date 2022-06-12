@@ -7,12 +7,17 @@ const pathname = Astro.canonicalURL.pathname;
 
 <header>
   <div class="topbar container flex">
-    <a href="/" class="brand clean">
-      <img src="/assets/KTV.webp" alt="KTV Guyane">
-    </a>
+    <div class="brand grid">
+      <a href="/" class="clean">
+        <img src="/assets/KTV.webp" alt="KTV Guyane">
+      </a>
+      <span><i>Regardons-nous être...</i></span>
+    </div>
     <div class="icons flex">
-      <SocialIcon brand="Facebook" href="https://www.facebook.com/KTVTOKO" />
-      <SocialIcon brand="Twitter" href="https://twitter.com" />
+      <div class="socials">
+        <SocialIcon brand="Facebook" href="https://www.facebook.com/KTVTOKO" />
+        <SocialIcon brand="Twitter" href="https://twitter.com" />
+      </div>
       <button class="menu-btn">
         <span class="sr-only">Ouvrir / fermer menu</span>
       </button>
@@ -38,23 +43,32 @@ const pathname = Astro.canonicalURL.pathname;
 
 <style>
   .topbar {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     height: 60px;
     margin-top: 1em;
   }
   .brand {
+    --gap: 0.25em;
+  }
+  .brand a {
     font-size: 1.5em;
     font-weight: 700;
     text-transform: uppercase;
     width: 150px;
   }
+  .brand span {
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
   .icons {
     align-items: center;
   }
+  .socials {
+    display: none;
+  }
   .navbar {
-    margin-top: 1.5em;
+    margin-top: 1em;
     min-height: 1em;
   }
   button {
@@ -93,7 +107,22 @@ const pathname = Astro.canonicalURL.pathname;
     background: green;
     height: 3px;
   }
+  @media (min-width: 460px) {
+    .brand {
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      --gap: inherit;
+    }
+  }
   @media (min-width: 768px) {
+    .brand span {
+      font-size: inherit;
+    }
+    .socials {
+      display: block;
+    }
+  }
+  @media (min-width: 970px) {
     .topbar button {
       display: none;
     }

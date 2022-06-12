@@ -17,7 +17,7 @@ const { sources, title, more= '/replays/' } = Astro.props as Props;
 ---
 
 <div class="container">
-  <h2>{title}</h2>
+  <h2><a href={more}>{title}</a></h2>
   <div class="grid">
     {sources.map(({ title, channel, id }) => (
       <a class="item clean flex" href={`/videos/${id}`}>
@@ -29,9 +29,9 @@ const { sources, title, more= '/replays/' } = Astro.props as Props;
       </a>
     ))}
   </div>
-  <p class="mt1">
+  <!-- <p class="mt1">
     ➔ <a href={more}>Voir plus</a>
-  </p>
+  </p> -->
 </div>
 
 <style>
