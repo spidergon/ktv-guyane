@@ -21,7 +21,7 @@ const { sources, title, more= '/replays/' } = Astro.props as Props;
   <div class="grid">
     {sources.map(({ title, channel, id }) => (
       <a class="item clean flex" href={`/videos/${id}`}>
-        <img src={`${vidUrl}${id}.jpg`} alt={`${title} - ${channel}`} />
+        <img src={`${vidUrl}${id}.jpg`} alt={`${title} - ${channel}`} loading="lazy" />
         <div class="content">
           <p>{title}</p>
           <span>{channel}</span>

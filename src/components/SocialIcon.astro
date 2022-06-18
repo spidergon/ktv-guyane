@@ -8,15 +8,12 @@ const { brand, href } = Astro.props as Props;
 ---
 
 <a class="clean" href={href} target="_blank" rel="noopener noreferrer">
-  <img src={`/assets/${brand.toLowerCase()}.svg`} alt={brand} title={`Suivez-nous sur ${brand}`}>
+  <img src={`/assets/${brand.toLowerCase()}.svg`} alt="" title={`Suivez-nous sur ${brand}`} width="27" height="27" loading="lazy">
 </a>
 
 <style>
   a {
     display: inline-block;
     padding: 0.5em;
-  }
-  img {
-    width: 1.5em;
   }
 </style>

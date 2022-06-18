@@ -24,8 +24,9 @@ export default function HeroPlaylist({ sources, title }) {
                   <img
                     src={`${vidUrl}${id}.jpg`}
                     alt={`${title} - ${channel}`}
-                    width="120px"
-                    height="70px"
+                    width="120"
+                    height="70"
+                    loading="lazy"
                   />
                 </div>
                 <div className={`${Styles.content} flex`}>
