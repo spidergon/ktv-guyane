@@ -1,6 +1,5 @@
 export default [
   { href: '/', title: 'Accueil' },
-  { href: '/jt/', title: 'Le JT' },
   { href: '/replays/', title: 'Replays' },
   { href: '/programme-tv/', title: 'Programme' },
   { href: '/a-propos/', title: 'À propos' },
