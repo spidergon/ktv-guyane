@@ -23,6 +23,7 @@ export default function HeroPlaylist({ sources, title }) {
                 <div>
                   <img
                     src={`${vidUrl}${id}.jpg`}
+                    // src={thumbnail_120_url}
                     alt={`${title} - ${channel}`}
                     width="120"
                     height="70"

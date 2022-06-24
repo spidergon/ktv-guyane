@@ -11,7 +11,13 @@ const sources = [
 	{title: 'Vidéo 03', channel: 'TV', id: 'video03'},
 ];
 
-const sourcesBis = [
+const sources2 = [
+	{title: 'Vidéo 03', channel: 'TV', id: 'video03'},
+	{title: 'Vidéo 04', channel: 'TV', id: 'video04'},
+	{title: 'Vidéo 05', channel: 'TV', id: 'video05'},
+];
+
+const sources3 = [
 	{title: 'Vidéo 07', channel: 'TV', id: 'video07'},
 	{title: 'Vidéo 06', channel: 'TV', id: 'video06'},
 	{title: 'Vidéo 05', channel: 'TV', id: 'video05'},
@@ -22,6 +28,12 @@ const sourcesActus = [
 	{title: 'nihil itaque quas', channel: 'Actu', id: 'video06'},
 	{title: 'ipsa repudiandae', channel: 'Actu', id: 'video05'},
 ];
+
+// Getting last 5 videos
+// const response = await fetch('https://api.dailymotion.com/videos?limit=5&fields=channel%2Ctitle%2Cid%2Cthumbnail_120_url&owners=x2nsv7s');
+// const lastVids = (await response.json()).list;
+// console.log(lastVids);
+
 ---
 
 <Layout title="KTV Guyane - Regardons-nous être">
@@ -32,18 +44,18 @@ const sourcesActus = [
 		<VideoGrid sources={sourcesActus} title="Actualités" />
 	</section>
 	<section>
-		<VideoGrid sources={sources} title="Les derniers Replays" />
+		<VideoGrid sources={sources2} title="Les derniers Replays" />
 	</section>
 	<section>
-		<VideoGrid sources={sourcesBis} title="Les Exclusivités" />
+		<VideoGrid sources={sources3} title="Les Exclusivités" />
 	</section>
 	<section>
-		<VideoGrid sources={sourcesBis} title="Les Documentaires" />
+		<VideoGrid sources={sources3} title="Les Documentaires" />
 	</section>
 	<section>
-		<VideoGrid sources={sourcesBis} title="Les Reportages" />
+		<VideoGrid sources={sources3} title="Les Reportages" />
 	</section>
 	<section>
-		<VideoGrid sources={sourcesBis} title="Les Concerts" />
+		<VideoGrid sources={sources3} title="Les Concerts" />
 	</section>
 </Layout>
