@@ -1,15 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import HeroPlaylist from '@components/Playlist.jsx';
+import Playlist from '@components/Playlist.astro';
 import VideoGrid from '@components/VideoGrid.astro';
-
-const sources = [
-	{title: 'Vidéo 07', channel: 'TV', id: 'video07'},
-	{title: 'Vidéo 06', channel: 'TV', id: 'video06'},
-	{title: 'Vidéo 05', channel: 'TV', id: 'video05'},
-	{title: 'Vidéo 04', channel: 'TV', id: 'video04'},
-	{title: 'Vidéo 03', channel: 'TV', id: 'video03'},
-];
 
 const sources2 = [
 	{title: 'Vidéo 03', channel: 'TV', id: 'video03'},
@@ -30,15 +22,13 @@ const sourcesActus = [
 ];
 
 // Getting last 5 videos
-// const response = await fetch('https://api.dailymotion.com/videos?limit=5&fields=channel%2Ctitle%2Cid%2Cthumbnail_120_url&owners=x2nsv7s');
-// const lastVids = (await response.json()).list;
-// console.log(lastVids);
-
+const response = await fetch('https://api.dailymotion.com/videos?limit=5&fields=channel%2Ctitle%2Cid%2Cthumbnail_120_url&owners=x2nsv7s');
+const lastVids = (await response.json()).list;
 ---
 
 <Layout title="KTV Guyane - Regardons-nous être">
 	<section>
-		<HeroPlaylist client:load sources={sources} title="Les denières vidéos" />
+		<Playlist sources={lastVids} title="Les denières vidéos" />
 	</section>
 	<section>
 		<VideoGrid sources={sourcesActus} title="Actualités" />

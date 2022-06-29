@@ -1,0 +1,80 @@
+---
+import Styles from '@styles/Playlist.module.css';
+
+export interface Source {
+  title: string;
+  channel: string;
+  id: string;
+  thumbnail_120_url: string;
+}
+
+export interface Props {
+  sources: Source[];
+  title: string;
+}
+
+const { sources, title } = Astro.props as Props;
+---
+
+<script is:inline src="https://geo.dailymotion.com/libs/player/x8vkt.js"></script>
+
+<div class={`${Styles.container} container grid`}>
+  <div id="dm-player">Chargement...</div>
+  <div class={Styles.playlist}>
+    <h2>{title}</h2>
+    <div>
+      {sources &&
+        sources.map(({ title, channel, id, thumbnail_120_url }) => (
+          <button
+            class={`flex vid-btn ${Styles.item}`}
+            title={`${title} - ${channel}`}
+            id={id}
+          >
+            <div>
+              <img
+                src={thumbnail_120_url}
+                alt={`${title} - ${channel}`}
+                width="120"
+                height="70"
+                loading="lazy"
+              />
+            </div>
+            <div class={`${Styles.content} flex`}>
+              <p>{title}</p>
+              <span>{channel}</span>
+            </div>
+          </button>
+        ))}
+    </div>
+  </div>
+</div>
+
+<style>
+  .active {
+    background: rgba(0, 0, 0, 0.3);
+  }
+</style>
+
+<script>
+  const first = document.querySelector('.vid-btn');
+  first.classList.add('active');
+
+	dailymotion
+		.createPlayer('dm-player', {
+			video: first.id,
+			player: 'x8vkt',
+			params: { mute: true },
+		})
+		.then((p) => {
+      const items = document.querySelectorAll('.vid-btn');
+      items.forEach(item => {
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
+          items.forEach(i => i.classList.remove('active'));
+          item.classList.add('active');
+          p.loadContent({video: item.id});
+        })
+      })
+		})
+		.catch((e) => console.error(e));
+</script>

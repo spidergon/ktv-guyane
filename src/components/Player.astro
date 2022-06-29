@@ -1,0 +1,24 @@
+---
+export interface Props {
+  id: string;
+}
+
+const { id } = Astro.props as Props;
+---
+
+<script is:inline src="https://geo.dailymotion.com/libs/player/x8vkt.js"></script>
+
+<div id="the-player" data-vid-id={id}>Chargement...</div>
+
+<script>
+  // console.log(document.getElementById('the-player').getAttribute('vid-id'))
+
+	dailymotion
+		.createPlayer('the-player', {
+			video: 'x8b8dgl',
+			player: 'x8vkt',
+			params: { mute: true },
+		})
+		.then((p) => console.log(p))
+		.catch((e) => console.error(e));
+</script>

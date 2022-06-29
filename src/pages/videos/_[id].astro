@@ -1,7 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import VideoBlock from '@components/VideoBlock.astro';
-import Player from '@components/Player.jsx';
+// import VideoBlock from '@components/VideoBlock.astro';
+// import Player from '@components/Player.jsx';
 
 // src/pages/videos/[id].astro
 const { id } = Astro.params;
@@ -21,7 +21,7 @@ export function getStaticPaths() {
 ---
 
 <Layout title={`${id} - KTV Guyane`}>
-  <VideoBlock title={`${id}`}>
+  <!-- <VideoBlock title={`${id}`}>
     <Player client:load id={id} />
-  </VideoBlock>
+  </VideoBlock> -->
 </Layout>
