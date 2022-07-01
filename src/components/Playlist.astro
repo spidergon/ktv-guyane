@@ -22,36 +22,46 @@ const { sources, title } = Astro.props as Props;
   <div id="dm-player">Chargement...</div>
   <div class={Styles.playlist}>
     <h2>{title}</h2>
-    <div>
-      {sources &&
-        sources.map(({ title, channel, id, thumbnail_120_url }) => (
-          <button
-            class={`flex vid-btn ${Styles.item}`}
-            title={`${title} - ${channel}`}
-            id={id}
-          >
-            <div>
-              <img
-                src={thumbnail_120_url}
-                alt={`${title} - ${channel}`}
-                width="120"
-                height="70"
-                loading="lazy"
-              />
-            </div>
-            <div class={`${Styles.content} flex`}>
-              <p>{title}</p>
-              <span>{channel}</span>
-            </div>
-          </button>
-        ))}
-    </div>
+    <>
+      {sources && sources.map(({ title, channel, id, thumbnail_120_url }) => (
+        <button
+          class={`flex vid-btn ${Styles.item}`}
+          title={`${title} - ${channel}`}
+          id={id}
+        >
+          <img
+            src={thumbnail_120_url}
+            alt=""
+            width="120"
+            height="70"
+            loading="lazy"
+          />
+          <div class={`${Styles.content} flex`}>
+            <p>{title}</p>
+            <span>{channel}</span>
+          </div>
+        </button>
+      ))}
+    </>
   </div>
 </div>
 
 <style>
   .active {
-    background: rgba(0, 0, 0, 0.3);
+    position: relative;
+    background: #8f96a3;
+  }
+  @media (min-width: 970px) {
+    .active::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -12px;
+      padding: 12px;
+      background: #8f96a3;
+      transform: translateY(-50%) rotate(45deg);
+      -webkit-transform: translateY(-50%) rotate(45deg);
+    }
   }
 </style>
 

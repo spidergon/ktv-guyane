@@ -24,6 +24,7 @@
 .item img {
   object-fit: cover;
   min-width: 120px;
+  background: gray;
 }
 .content {
   line-height: 1.5;
