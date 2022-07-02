@@ -16,7 +16,7 @@ export interface Props {
 const { sources, title, more= '/replays/' } = Astro.props as Props;
 ---
 
-<div class="container">
+<section>
   <h2>{title}<span><a href={more}>Voir plus ➔</a></span></h2>
   <div class="grid">
     {sources.map(({ title, channel, id }) => (
@@ -32,14 +32,14 @@ const { sources, title, more= '/replays/' } = Astro.props as Props;
   <p class="mob-more mt1">
     <a href={more}><strong>Voir plus ➔</strong></a>
   </p>
-</div>
+</section>
 
 <style>
 	h2 {
     position: relative;
-		margin: 1em 0;
+		margin-bottom: 0.5em;
     font-weight: 700;
-		text-transform: uppercase;
+    text-transform: uppercase;
 	}
   h2 span {
     display: none;
@@ -76,15 +76,19 @@ const { sources, title, more= '/replays/' } = Astro.props as Props;
       display: none;
     }
 		.grid {
-			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-columns: 1fr 1fr;
 		}
 		img {
 			flex-grow: 1;
 		}
 	}
 	@media (min-width: 970px) {
+    h2 {
+      margin-bottom: 1em;
+    }
 		.grid {
 			--gap: 1.5em;
+      grid-template-columns: 1fr 1fr 1fr;
 		}
 	}
 </style>

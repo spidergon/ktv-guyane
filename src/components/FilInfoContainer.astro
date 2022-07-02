@@ -1,0 +1,28 @@
+---
+import FilInfo from '@components/FilInfo.astro';
+---
+
+<div class="container flex mt">
+  <slot />
+  <div class="info">
+    <FilInfo />
+  </div>
+</div>
+
+<style>
+	.info {
+		display: none;
+	}
+	@media (min-width: 768px) {
+		.info {
+			display: block;
+			min-width: 40%;
+			padding-inline: 1em;
+		}
+	}
+	@media (min-width: 970px) {
+		.info {
+			min-width: 23em;
+		}
+	}
+</style>

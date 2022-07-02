@@ -2,6 +2,7 @@
 import Layout from '@layouts/Layout.astro';
 import Playlist from '@components/Playlist.astro';
 import VideoGrid from '@components/VideoGrid.astro';
+import FilInfoContainer from '@components/FilInfoContainer.astro';
 
 const sources2 = [
 	{title: 'Vidéo 03', channel: 'TV', id: 'video03'},
@@ -27,25 +28,15 @@ const lastVids = (await response.json()).list;
 ---
 
 <Layout title="KTV Guyane - Regardons-nous être">
-	<section>
-		<Playlist sources={lastVids} title="Les denières vidéos" />
-	</section>
-	<section>
-		<VideoGrid sources={sourcesActus} title="Actualités" />
-	</section>
-	<section>
-		<VideoGrid sources={sources2} title="Les derniers Replays" />
-	</section>
-	<section>
-		<VideoGrid sources={sources3} title="Les Exclusivités" />
-	</section>
-	<section>
-		<VideoGrid sources={sources3} title="Les Documentaires" />
-	</section>
-	<section>
-		<VideoGrid sources={sources3} title="Les Reportages" />
-	</section>
-	<section>
-		<VideoGrid sources={sources3} title="Les Concerts" />
-	</section>
+	<Playlist sources={lastVids} title="Les denières vidéos" />
+	<FilInfoContainer>
+		<div class="flow">
+			<VideoGrid sources={sourcesActus} title="Actualités" />
+			<VideoGrid sources={sources2} title="Les derniers Replays" />
+			<VideoGrid sources={sources3} title="Les Exclusivités" />
+			<VideoGrid sources={sources3} title="Les Documentaires" />
+			<VideoGrid sources={sources3} title="Les Reportages" />
+			<VideoGrid sources={sources3} title="Les Concerts" />
+		</div>
+	</FilInfoContainer>
 </Layout>

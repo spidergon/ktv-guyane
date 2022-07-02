@@ -129,9 +129,9 @@ select {
   gap: var(--gap, 1rem);
 }
 
-/* .flow > *:where(:not(:first-child)) {
-  margin-top: var(--flow-space, 1rem);
-} */
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 2rem);
+}
 
 .container {
   padding-inline: var(--container-padding, 1em);
@@ -153,6 +153,10 @@ select {
 
 .center {
   text-align: center;
+}
+
+.mt {
+  margin-top: 2rem;
 }
 
 .mt1 {
@@ -189,12 +193,11 @@ a:not(.clean).active:before {
   width: 100%;
 }
 
-section {
-  padding: 1em 0;
-}
-
-@media (min-width: 768px) {
-  section {
-    padding: 2em 0;
+@media (min-width: 970px) {
+  :root {
+    --flow-space: 4rem;
+  }
+  .mt {
+    margin-top: 4rem;
   }
 }

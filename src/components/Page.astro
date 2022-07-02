@@ -1,4 +1,6 @@
 ---
+import FilInfoContainer from '@components/FilInfoContainer.astro';
+
 export interface Props {
   title: string;
 }
@@ -6,14 +8,12 @@ export interface Props {
 const { title } = Astro.props as Props;
 ---
 
-<section>
-  <div class="container">
-    <div class="page-container">
-      <h1>{title}</h1>
-      <slot />
-    </div>
+<FilInfoContainer>
+  <div class="page-container">
+    <h1>{title}</h1>
+    <slot />
   </div>
-</section>
+</FilInfoContainer>
 
 <style>
   .page-container {

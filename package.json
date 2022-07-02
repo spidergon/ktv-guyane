@@ -11,15 +11,12 @@
     "prettier:fix": "prettier --write ."
   },
   "devDependencies": {
-    "@astrojs/react": "0.2.0",
     "@astrojs/sitemap": "0.2.4",
     "@babel/core": "7.18.6",
-    "astro": "1.0.0-beta.62",
+    "astro": "1.0.0-beta.63",
     "astro-compress": "0.0.12",
     "prettier": "2.7.1",
-    "prettier-plugin-astro": "0.1.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "prettier-plugin-astro": "0.1.1"
   },
   "peerDependencies": {
     "@babel/core": ">=7.0.0-0 <8.0.0"
