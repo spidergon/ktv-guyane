@@ -5,6 +5,7 @@
 :root {
   /* colors */
   --clr-dark: 230 35% 7%;
+  --clr-green: 115, 100%, 20%;
   /* --clr-light: 231 77% 90%; */
   /* --clr-white: 0 0% 100%; */
 
@@ -15,7 +16,7 @@
   /* --fs-600: 2rem; */
   /* --fs-500: 1.75rem; */
   --fs-400: 1.125rem;
-  /* --fs-300: 1rem; */
+  --fs-300: 1rem;
   /* --fs-200: 0.875rem; */
 
   /* font-families */
@@ -161,6 +162,13 @@ select {
 
 .mt1 {
   margin-top: 1rem;
+}
+
+.sub {
+  display: block;
+  color: gray;
+  margin-top: -0.5rem;
+  font-size: 1em;
 }
 
 /* ------------------- */

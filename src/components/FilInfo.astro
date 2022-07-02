@@ -1,1 +1,61 @@
 <h2>Fil de l'info</h2>
+<span class="sub">l'actualité en temps réel</span>
+<div class="wrapper flow">
+  <a class="info clean" href="#" aria-label="Lorem, ipsum dolor sit">
+    <div class="time">9h00</div>
+    <h3>Lorem, ipsum dolor sit</h3>
+    <p>
+      Amet consectetur adipisicing elit. Adipisci necessitatibus eius at, non voluptatibus inventore architecto quam, rem aspernatur porro quisquam sapiente tenetur. Corrupti mollitia velit dolorem dicta voluptate provident.
+    </p>
+  </a>
+  <a class="info clean" href="#" aria-label="Lorem, ipsum dolor sit">
+    <div class="time">1 juillet</div>
+    <h3>Lorem, ipsum dolor sit</h3>
+    <p>
+      Amet consectetur adipisicing elit. Adipisci necessitatibus eius at, non voluptatibus inventore architecto quam, rem aspernatur porro quisquam sapiente tenetur. Corrupti mollitia velit dolorem dicta voluptate provident.
+    </p>
+  </a>
+</div>
+
+<style>
+  .wrapper {
+    border-left: 1px dashed #bfbfbf;
+    margin-top: 1rem;
+    --flow-space: 1rem;
+  }
+  .info {
+    display: block;
+    font-size: var(--fs-300);
+    max-width: 500px;
+  }
+  .info:hover,
+  .info:focus {
+    background: #e8e8e8;
+  }
+  .time {
+    position: relative;
+    padding-left: 0.5em;
+    font-weight: 700;
+    color: hsl(var(--clr-green));
+  }
+  .time::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -4px;
+    top: 50%;
+    width: 7px;
+    height: 7px;
+    background-color: hsl(var(--clr-green));
+    border-radius: 20px;
+    transform: translateY(-50%);
+  }
+  h3 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  h3,
+  p {
+    margin-left: 1em;
+  }
+</style>
